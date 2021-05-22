@@ -8,29 +8,46 @@
   <title>Restaurant Review</title>
 </head>
 <body>
-  
-  <h1><span></span> World-Famous Restaurant Reviews</h1>
-  
-  <div class="section">
-    <h2>Recent Reviews</h2>
-    <div class="review">
-      <h3>Dat Dog</h3>
-      <p>Best gator sausage New Orleans has to offer!</p>
-    </div>
-    <div id="newRestaurant">
-      <h3></h3>
-      <p></p>
-    </div>
-  </div>
-  <div class="section">
-    <h2>Add a Review</h2>
-    <p id="flashMessage">Write a review in the next 24 hours and receive a 10% off coupon!</p>
+  <div class="sticky">
+    <header>
+      <h1><span>Yap!</span> New Orleans Restaurant Reviews</h1>
+    </header>
     
-    <label>Restaurant Title: <input type="text" id="restaurantNameInput"></label>
-    <label>Restaurant Review: <textarea id="restaurantReviewInput"></textarea></label>
-    <button id="submitBtn">Submit</button>
+    <main>
+      <div class="section">
+        <h2>Welcome to Yap!</h2>
+        <p>Please leave a review for your favorite restaurant</p>
+        <p id="flashMessage">Write a review in the next 24 hours and receive a 10% off coupon!</p>
+        <button id="reviewButton">Add a Review</button>
+      </div>
     
+      <div class="section">
+        <h2 class="recent">Recent Reviews</h2>
+        <div class="review">
+          <h3>Dat Dog</h3>
+          <p>Best gator sausage New Orleans has to offer!</p>
+        </div>
+        <div id="newRestaurant">
+         
+          <!-- add reviews dynamically with jQuery here -->
+
+        </div>
+      </div>
+    
+      <!-- modal -->
+      <div id="reviewModal">
+        <div class="modal-container">
+          <label>Restaurant Title: <input type="text" id="restaurantNameInput"></label>
+          <label>Restaurant Review: <textarea id="restaurantReviewInput"></textarea></label>
+          <button id="submitBtn">Submit</button>
+        </div>
+      </div>
+    </main>
   </div>
+  <footer>
+    <p>Copyright 2021 Bert Witzel</p>
+  </footer>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/app.js"></script>
 </body>

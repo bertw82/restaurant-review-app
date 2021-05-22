@@ -1,78 +1,163 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --color-background: #264653;
+  --color-accent: #2A9D8F;
+  --color-button: #E76F51;
+  --color-body: #E9C46A;
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Work Sans', 'Open Sans', sans-serif;
-  }
-  
-  body {
-    background-color: #fff;
-    margin: 30px;
-  }
-  
-  h1, h2 {
-    margin-bottom: 30px;
-  }
-  
-  h3, h1 span {
-    color: #537d7b;
-  }
-  
-  label{
-    margin-top: 30px;
-    display: block;
-    text-transform: uppercase;
-    color: #333;
-    letter-spacing: 2px;
-  }
-  
-  input, textarea {
-      width: 100%;
-      font-size: 18px;
-      border-radius: 5px;
-      border: 1px solid #cdcfcf;
-      margin-top:5px;
-      padding: 10px;
-      color: #333;
-      background-color: #f6f8f8;
-  }
-  
-  #restaurantReviewInput {
-    height: 100px;
-  }
-  
-  button {
-    background: #537d7b;
-    border: none;
+    font-family: 'Roboto', sans-serif;;
+}
+
+body {
+  background-color: #fff;
+  /* margin: 30px; */
+}
+
+.sticky {
+  height: calc(100vh - 58px);
+}
+
+/* main */
+main {
+  margin: 20px;
+
+}
+
+h1 {
+  background-color: var(--color-background);
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+
+h1 span {
+  color: var(--color-body);
+}
+
+h3 {
+  color: var(--color-button);
+}
+
+label{
+  margin-top: 30px;
+  display: block;
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+input, textarea {
+    width: 100%;
+    font-size: 18px;
     border-radius: 5px;
-    color: #fff;
-    font-size: 15px;
-    padding: 15px 30px;
-    cursor: pointer;
-    text-shadow: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 15px;
+    border: 1px solid #cdcfcf;
+    margin-top:5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #333;
+    background-color: #f6f8f8;
+}
+
+#restaurantReviewInput {
+  height: 100px;
+}
+
+button {
+  /* background: #537d7b; */
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  text-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  /* margin-bottom: 15px; */
+}
+
+#reviewButton {
+  padding-bottom: 20px;
+}
+
+ul {
+  padding-left: 0; 
+  list-style-type: none;
+}
+
+.recent {
+  border-bottom: 1px solid rgba(0,0,0,.4);
+  padding-bottom: 10px;
+}
+
+.section {
+  /* float: left;
+  width: 48%; */
+}
+
+.review {
+  padding-bottom: 15px;
+}
+.review, #flashMessage {
+  display: none;
+}
+
+#flashMessage {
+  margin-top: 15px;
+  padding: 10px;
+  background: var(--color-button);
+  color: white;
+  border-radius: 5px;
+}
+
+/* Modal styles */
+#reviewModal {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: var(--color-body);
+}
+
+.modal-container {
+  width: 80%;
+  margin: 15% auto;
+}
+
+.modal-container label {
+
+}
+
+/* footer */
+footer {
+  background-color: var(--color-background);
+}
+
+footer p {
+  color: #fff;
+  padding: 20px;
+  text-align: center; 
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 70%;
+    margin: 0 auto;
   }
-  
-  ul {
-    padding-left: 0; 
-    list-style-type: none;
-  }
-  
-  .section {
-    float: left;
-    width: 48%;
-  }
-  
-  .review {
-    padding-bottom: 15px;
-  }
-  .review, #flashMessage {
-    display: none;
-  }
-  
-  #flashMessage {
-    padding: 10px;
-    background: #537d7b;
-    color: white;
-  }
+}
