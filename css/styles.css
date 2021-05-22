@@ -52,11 +52,15 @@ h3 {
 }
 
 label{
-  margin-top: 30px;
+  margin-top: 60px;
   display: block;
   text-transform: uppercase;
   color: #333;
   letter-spacing: 2px;
+}
+
+label + label {
+  margin-top: 30px;
 }
 
 input, textarea {
@@ -140,8 +144,14 @@ ul {
   margin: 15% auto;
 }
 
-.modal-container label {
-
+#closeButton {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+  background-color: var(--color-background);
 }
 
 /* footer */
