@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://kit.fontawesome.com/08b19d1da2.js" crossorigin="anonymous"></script>
   <title>Restaurant Review</title>
 </head>
 <body>
   <div class="sticky">
     <header>
-      <h1><span>Yap!</span> New Orleans Restaurant Reviews</h1>
+      <h1><span>Yap!</span> Restaurant Reviews</h1> 
     </header>
     
     <main>
@@ -26,6 +28,12 @@
         <div class="review">
           <h3>Dat Dog</h3>
           <p>Best gator sausage New Orleans has to offer!</p>
+          <span>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </span>
         </div>
         <div id="newRestaurant">
          
@@ -33,23 +41,70 @@
 
         </div>
       </div>
-    
-      <!-- modal -->
-      <div id="reviewModal">
-        <div class="modal-container">
-          <span id="closeButton">X</span>
-          <label>Restaurant Title: <input type="text" id="restaurantNameInput"></label>
-          <label>Restaurant Review: <textarea id="restaurantReviewInput"></textarea></label>
-          <button id="submitBtn">Submit</button>
+
+      <div class="photo-gallery">
+        <!-- photo gallery created with FancyBox plugin https://fancyapps.com/fancybox/3/ -->
+        <h2>User Photos</h2>
+        <div class="gallery-div">
+          <!-- Dean101.2019, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons -->
+        <a href="images/meal-1.jpg" data-fancybox="gallery" data-caption="Great burgers!">
+          <img src="images/thumbnails/meal-1-thumbnail.jpg" style="width: 256px; height: 205px;" alt="plate of food with a burger" />
+        </a>
+        <!-- Architxture, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons -->
+        <a href="images/meal-2.jpg" data-fancybox="gallery" data-caption="Super fancy!">
+          <img src="images/thumbnails/meal-2-thumbnail.jpg" style="width: 256px; height: 205px;" alt="plate of food, wine glassed, and bread" />
+        </a>
+        <!-- Acabashi, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons -->
+        <a href="images/meal-3.jpg" data-fancybox="gallery" data-caption="Their English breakfast is so good...">
+          <img src="images/thumbnails/meal-3-thumbnail.jpg" style="width: 256px; height: 205px;" alt="Plate of food, English breakfast, eggs and beans" />
+        </a>
+        <!-- Petar Milošević, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons -->
+        <a href="images/meal-4.jpg" data-fancybox="gallery" data-caption="Yummy!">
+          <img src="images/thumbnails/meal-4-thumbnail.jpg" style="width: 256px; height: 205px;" alt="dish containing rice and chicken" />
+        </a>
+        <!-- Bart Everson, CC BY 2.0 https://creativecommons.org/licenses/by/2.0, via Wikimedia Commons -->
+        <a href="images/meal-5.jpg" data-fancybox="gallery" data-caption="Delicious, will definitely come back">
+          <img src="images/thumbnails/meal-5-thumbnail.jpg" style="width: 256px; height: 205px;" alt="big plate of food with chicken, mashed potatoes and gravy" />
+        </a>
         </div>
       </div>
     </main>
   </div>
+
+  <!-- modal -->
+  <div id="reviewModal">
+    <div class="modal-container">
+      <span id="closeButton">X</span>
+      <label class="title">Restaurant Title: 
+        <input type="text" id="restaurantNameInput">
+      </label>
+      <label class="title">Restaurant Review: 
+        <textarea id="restaurantReviewInput"></textarea>
+      </label>
+      <!-- star rating html and css from https://codepen.io/zanzabar/pen/NWWEMpd -->
+      <label class="title">Give a star rating: 1 (worst) - 5 (best) </label>
+      <div class="wrapper clearfix">
+        <input type="radio" name="star" id="st1" value="1" />
+        <label for="st1"></label>
+        <input type="radio" name="star" id="st2" value="2" />
+        <label for="st2"></label>
+        <input type="radio" name="star" id="st3" value="3" />
+        <label for="st3"></label>
+        <input type="radio" name="star" id="st4" value="4" />
+        <label for="st4"></label>
+        <input type="radio" name="star" id="st5" value="5" />
+        <label for="st5"></label>
+      </div>
+      <button id="submitBtn">Submit</button>
+    </div>
+  </div>
+
   <footer>
     <p>Copyright 2021 Bert Witzel</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
