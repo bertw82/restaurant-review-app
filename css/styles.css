@@ -171,6 +171,9 @@ ul {
   right: 0;
   position: fixed;
   background-color: var(--color-body);
+  z-index: 1000;
+  overflow: scroll;
+  height: 100%;
 }
 
 .modal-container {
